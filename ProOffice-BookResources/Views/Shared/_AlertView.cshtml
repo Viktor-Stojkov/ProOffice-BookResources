@@ -1,0 +1,35 @@
+﻿<link rel="stylesheet" type="text/css" href="/lib/toastr.js/toastr.min.css"/>
+<script type="text/javascript" src="~/lib/toastr.js/toastr.min.js" defer></script>
+
+<script type="module" defer>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": true,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "5000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+
+    let successMessage = document.querySelector("#successMessage");
+    let errorMessage = document.querySelector("#errorMessage");
+
+    if (successMessage && successMessage.textContent) {
+        toastr.success(successMessage.textContent);
+    }
+    else if (errorMessage && errorMessage.textContent) {
+        toastr.error(errorMessage.textContent);
+    }
+</script>
+
+@Html.ValidationMessage("Success", new { @id = "successMessage", @class = "d-none" })
+@Html.ValidationMessage("Error", new { @id = "errorMessage", @class = "d-none" })
