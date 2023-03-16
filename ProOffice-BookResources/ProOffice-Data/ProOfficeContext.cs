@@ -14,7 +14,7 @@ namespace ProOffice_BookResources.ProOffice_Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=VICTOR-LENOVO;Initial Catalog=ProOfficeBookingResources;Integrated Security=SSPI;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Data Source=VICTOR-LENOVO;Initial Catalog=ProOfficeBookingResourcess;Integrated Security=SSPI;TrustServerCertificate=True;");
         }
     }
 }
