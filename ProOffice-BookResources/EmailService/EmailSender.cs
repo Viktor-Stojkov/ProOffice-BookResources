@@ -65,7 +65,7 @@ namespace ProOffice_BookResources.EmailService
                 {
                     await client.ConnectAsync("smtp.gmail.com", 465, true);
                     client.AuthenticationMechanisms.Remove("XOAUTH2");
-                    await client.AuthenticateAsync("viktor.stojkov93@gmail.com", "rgopqporrucvwqvx"); // email, password
+                    await client.AuthenticateAsync("viktor.stojkov93@gmail.com", "needGoogleGeneratedPasswordFromProvideLink"); // email, password
                     await client.SendAsync(mailMessage);
 
                     //Линк до Google Account за да генерира нов пасворд за постоечкиот маил од кој што сакаме да го пратиме маилот
